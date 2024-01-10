@@ -1,18 +1,8 @@
-ï»¿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Hangfire.Logging;
-using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using NLog;
 using NLog.Web;
 
-namespace RedisHangfire
+namespace Dashboard.HangfireRedis
 {
     public class Program
     {
@@ -21,7 +11,7 @@ namespace RedisHangfire
             var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings();
             try
             {
-                System.Threading.ThreadPool.SetMinThreads(200, 200); //è®¾ç½®å…¨å±€çº¿ç¨‹æ± 
+                System.Threading.ThreadPool.SetMinThreads(200, 200); //ÉèÖÃÈ«¾ÖÏß³Ì³Ø
                 CreateHostBuilder(args).Build().Run();
             }
             catch (Exception ex)
@@ -35,7 +25,7 @@ namespace RedisHangfire
                 // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
                 NLog.LogManager.Shutdown();
             }
-          
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

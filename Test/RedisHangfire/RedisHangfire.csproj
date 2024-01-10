@@ -14,6 +14,7 @@
   <ItemGroup>
     <PackageReference Include="FaceIT.Hangfire.Tags.Redis.StackExchange" Version="1.9.1" />
     <PackageReference Include="Hangfire.Dashboard.BasicAuthorization" Version="1.0.2" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.7" />
   </ItemGroup>
 
   <ItemGroup>

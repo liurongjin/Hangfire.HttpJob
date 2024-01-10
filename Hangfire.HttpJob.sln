@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.HttpJob", "Server\Hangfire.HttpJob\Hangfire.HttpJob.csproj", "{DE788EAF-44CC-48CB-860E-80EE3554FE67}"
 EndProject
@@ -59,7 +59,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestHangfirePostgreSqlAgent
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostgreSql", "PostgreSql", "{E769ED90-3C3E-11EB-83C9-CB73B258353F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgreSqlHangfire", "Test\PostgreSqlHangfire\PostgreSqlHangfire.csproj", "{BD74A077-6ED0-46DA-9E48-82ED01542644}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostgreSqlHangfire", "Test\PostgreSqlHangfire\PostgreSqlHangfire.csproj", "{BD74A077-6ED0-46DA-9E48-82ED01542644}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Produce", "Produce", "{A3D2C6B0-6236-4FDB-8BD3-19765C1E577C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.HangfireRedis", "Produce\Dashboard.HangfireRedis\Dashboard.HangfireRedis.csproj", "{D6852CA8-9D11-4AC2-BF2B-4AA626267C0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,6 +143,10 @@ Global
 		{BD74A077-6ED0-46DA-9E48-82ED01542644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD74A077-6ED0-46DA-9E48-82ED01542644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD74A077-6ED0-46DA-9E48-82ED01542644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6852CA8-9D11-4AC2-BF2B-4AA626267C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6852CA8-9D11-4AC2-BF2B-4AA626267C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6852CA8-9D11-4AC2-BF2B-4AA626267C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6852CA8-9D11-4AC2-BF2B-4AA626267C0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -167,6 +175,7 @@ Global
 		{39D1E69F-943E-4CEA-82CC-1F1689379A3C} = {E769ED90-3C3E-11EB-83C9-CB73B258353F}
 		{E769ED90-3C3E-11EB-83C9-CB73B258353F} = {6C712EFD-9B0C-431B-8B79-06177DF325BA}
 		{BD74A077-6ED0-46DA-9E48-82ED01542644} = {E769ED90-3C3E-11EB-83C9-CB73B258353F}
+		{D6852CA8-9D11-4AC2-BF2B-4AA626267C0B} = {A3D2C6B0-6236-4FDB-8BD3-19765C1E577C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5F0048D-888D-47DA-8714-2283937235BC}
