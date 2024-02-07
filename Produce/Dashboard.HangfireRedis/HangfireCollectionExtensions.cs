@@ -21,6 +21,7 @@ namespace Dashboard.HangfireRedis
         private const string HangfireSettingsKey = "Hangfire:HangfireSettings";
         private const string HttpJobOptionsKey = "Hangfire:HttpJobOptions";
         private const string HangfireConnectStringKey = "Hangfire:HangfireSettings:ConnectionString";
+        private const string HangfireDefaultRedisDbKey = "Hangfire:HangfireSettings:DefaultRedisDb";
         private const string HangfireLangKey = "Hangfire:HttpJobOptions:Lang";
 
         public static IServiceCollection AddSelfHangfire(this IServiceCollection services, IConfiguration configuration)
@@ -91,7 +92,8 @@ namespace Dashboard.HangfireRedis
                 Prefix = hangfireSettings.TablePrefix,
                 SucceededListSize = 9999,
                 DeletedListSize = 4999,
-                UseTransactions = false
+                UseTransactions = false,
+                Db = configuration.GetSection(HangfireDefaultRedisDbKey).Get<int>()
             };
             var redis = ConnectionMultiplexer.Connect(sqlConnectStr);
             globalConfiguration.UseRedisStorage(redis, options)
